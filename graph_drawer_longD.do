@@ -13,7 +13,7 @@ frame change graph_frame
 	graph hbar value_exm value_9, over(category, sort(1)) stack percentage ///
 		bar(1, color(236 107 86))  ///
 		bar(2, color(71  179 156)) ///
-		legend(pos(6) order(1 "مخارج معاف از مالیات" 2 "مخارج مشمول مالیات")) ///
+		legend(row(1) pos(6) order(1 "مخارج معاف از مالیات" 2 "مخارج مشمول مالیات")) ///
 		title(مقایسه مخارج مشمول و مخارج معاف از مالیات بر ارزش افزوده در دسته‌های مختلف) ///
 		ytitle(درصد) ///
 		name(exm_exp_share_$year, replace)

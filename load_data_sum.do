@@ -8,6 +8,14 @@ duplicates drop
 reshape wide cat_*, i(address) j(category)
 order address is_urban tv_* cat_*
 
+	
+local cats 13 1 3 4 5 6 7 8 9 10 11 12
+foreach cat of local cats {
+    replace cat_exm_`cat' 	= 0 if missing(cat_exm_`cat')
+	replace cat_9_`cat' 	= 0 if missing(cat_9_`cat')
+	replace cat_other_`cat' = 0 if missing(cat_other_`cat')
+}
+
 
 tempfile expenditure_tempfile
 save `expenditure_tempfile', replace

@@ -167,7 +167,7 @@ replace is_monthly = 0 if missing(is_monthly)
 replace value = value * 12 if is_monthly == 1
 
 if $paid_exp_only == 1 {
-    drop if vat_rate == 01
+    drop if vat_rate == -1
 }
 else {
 	replace vat_rate = 0 if vat_rate == -1
