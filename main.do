@@ -9,7 +9,7 @@ frame reset
 graph set window fontface "B Nazanin"
 graph drop _all
 
-global year 1401
+global year 1402
 global paid_exp_only = 1
 
 global dir "~/Documents/Data/HEIS/$year/csv"
@@ -25,7 +25,6 @@ use  "./dta files/vat_exp_data_${year}_paidOnly_${paid_exp_only}__long.dta", rep
 do "./graph_drawer_longD.do"
 
 **********
-
 // load data from data_sum
 do "./load_data_sum.do"
 

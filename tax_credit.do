@@ -1,4 +1,5 @@
 frame change default
+// graph drop _all
 
 graph set svg fontface "B Nazanin"
 
